@@ -2,6 +2,8 @@
 
 ---
 
+*Este script em Python automatiza o download e a organização de cursos armazenados em canais do Telegram. Ele lê o histórico de mensagens, converte textos estruturais em pastas no HD e baixa todos os arquivos, como vídeos e PDFs, diretamente para os módulos corretos, restaurando a estrutura original.*
+
 ## AVISO IMPORTANTE PARA INICIANTES
 
 * Para utilizar esta ferramenta, é obrigatório que você possua a linguagem *Python* instalada no seu computador. Caso ainda não tenha, procure pelo site oficial do Python para realizar o download e a instalação antes de prosseguir com os passos abaixo.
