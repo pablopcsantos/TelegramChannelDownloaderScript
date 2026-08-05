@@ -29,7 +29,7 @@
 
 ### PASSO 3: CONFIGURAR O *SCRIPT*
 
-* Abra o arquivo `extrator_telegram_completo.py` em qualquer editor de texto.
+* Abra o arquivo `extrator_telegram.py` em qualquer editor de texto.
 * Logo no início do arquivo, você verá uma seção de configurações.
 * Substitua os campos de `API_ID` e `API_HASH` pelos valores que você obteve no passo 1.
 * No campo `CANAL_ALVO`, insira o link ou a identificação do canal do Telegram que contém o curso (Ex: 't.me/nome_do_canal').
@@ -40,7 +40,7 @@
 
 * Volte ao seu *terminal* ou *prompt* de comando.
 * Navegue até a pasta onde o seu *script* está salvo e digite o seguinte comando para iniciar o programa:
-  `python extrator_telegram_completo.py`
+  `python extrator_telegram.py`
 * Como será a primeira vez que você roda o programa, ele pedirá que você confirme sua identidade. Digite seu número de celular com o código do país (por exemplo, digite o número +5511981456734 caso o seu celular seja (11) 98145-6734) e aperte *Enter*.
 * O Telegram enviará um código numérico de verificação diretamente para o aplicativo no seu celular.
 * Digite esse código no *terminal*.
