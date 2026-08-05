@@ -1,3 +1,7 @@
+*Read this in other languages: [English](README-en.md)*
+
+---
+
 ## AVISO IMPORTANTE PARA INICIANTES
 
 * Para utilizar esta ferramenta, é obrigatório que você possua a linguagem *Python* instalada no seu computador. Caso ainda não tenha, procure pelo site oficial do Python para realizar o download e a instalação antes de prosseguir com os passos abaixo.
