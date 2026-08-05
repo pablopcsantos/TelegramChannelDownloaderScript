@@ -1,4 +1,4 @@
-**AVISO IMPORTANTE PARA INICIANTES**
+## AVISO IMPORTANTE PARA INICIANTES
 
 * Para utilizar esta ferramenta, é obrigatório que você possua a linguagem *Python* instalada no seu computador. Caso ainda não tenha, procure pelo site oficial do Python para realizar o download e a instalação antes de prosseguir com os passos abaixo.
 
@@ -13,9 +13,9 @@
 
 * Acesse o site `my.telegram.org` através do seu navegador e faça *login* utilizando o seu número de celular.
 * Clique na opção *API development tools*.
-* Preencha os campos *App title* e *Short name* com o nome que desejar, por exemplo, ExtratorDeCursos. Em *Platform*, deixe como *Desktop*.
+* Preencha os campos `App title` e `Short name` com o nome que desejar, por exemplo, ExtratorDeCursos. Em *Platform*, deixe como *Desktop*.
 * Clique no botão *Create application*.
-* Na página seguinte, copie os valores apresentados em *App api_id*, que é uma sequência de números, e *App api_hash*, que é uma sequência misturando letras e números. Guarde esses dados.
+* Na página seguinte, copie os valores apresentados em `App api_id`, que é uma sequência de números, e `App api_hash`, que é uma sequência misturando letras e números. Guarde esses dados.
 
 ### PASSO 2: PREPARAR O AMBIENTE
 
@@ -27,7 +27,7 @@
 
 * Abra o arquivo `extrator_telegram_completo.py` em qualquer editor de texto.
 * Logo no início do arquivo, você verá uma seção de configurações.
-* Substitua os campos de *API_ID* e *API_HASH* pelos valores que você obteve no passo 1.
+* Substitua os campos de `API_ID` e `API_HASH` pelos valores que você obteve no passo 1.
 * No campo `CANAL_ALVO`, insira o link ou a identificação do canal do Telegram que contém o curso (Ex: 't.me/nome_do_canal').
 * No campo `PASTA_BASE`, insira o caminho completo da pasta no seu computador ou HD externo onde o curso deve ser salvo (Ex: 'C:\Users\Fulano\Documents\Cursos').
 * Salve o arquivo com as suas alterações.
