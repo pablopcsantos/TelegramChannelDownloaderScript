@@ -1,7 +1,9 @@
 **AVISO IMPORTANTE PARA INICIANTES**
+
 Para utilizar esta ferramenta, é obrigatório que você possua a linguagem *Python* instalada no seu computador. Caso ainda não tenha, procure pelo site oficial do Python para realizar o download e a instalação antes de prosseguir com os passos abaixo.
 
-# EXTRATOR E ORGANIZADOR DE CURSOS DO TELEGRAM
+## EXTRATOR E ORGANIZADOR DE CURSOS DO TELEGRAM
+
 Este script em Python automatiza todo o processo de download e organização de arquivos de cursos disponibilizados em canais do Telegram. Ao ser executado, ele varre o histórico de mensagens do canal desejado. Toda vez que identifica um texto estrutural (como o título de um módulo), ele cria uma pasta correspondente no seu disco rígido. Em seguida, ele baixa todos os arquivos anexados, incluindo vídeos, PDFs, planilhas e arquivos compactados, salvando-os diretamente nas respectivas pastas. Isso garante a restauração da estrutura original do curso de forma simples e automatizada.
 
 ## TUTORIAL DE COMO EXECUTAR O SCRIPT
