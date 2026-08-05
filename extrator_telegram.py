@@ -9,7 +9,7 @@ from telethon.tl.types import DocumentAttributeVideo
 API_ID = 'SEU_API_ID_AQUI' 
 API_HASH = 'SEU_API_HASH_AQUI'
 CANAL_ALVO = 'link_do_canal_ou_ID' # Ex: 't.me/nome_do_canal'
-PASTA_BASE = r'D:\Cursos\NomeDoCurso' # Caminho do seu HD externo // Path to your external hard drive
+PASTA_BASE = r'D:\Cursos\NomeDoCurso' # Caminho do seu HD externo ou interno // Path to your external or internal hard drive
 
 # Nome da sessão (cria um arquivo .session na pasta para não pedir login toda vez)
 # Session name (creates a .session file in the folder so it doesn't ask for a login every time)
