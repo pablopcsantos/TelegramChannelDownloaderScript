@@ -32,8 +32,8 @@
 * Open the file `extrator_telegram.py` in any text editor.
 * Right at the beginning of the file, you will see a settings section.
 * Replace the `API_ID` and `API_HASH` fields with the values you obtained in step 1.
-* In the `CANAL_ALVO` field, insert the link or the ID of the Telegram channel that contains the course (Ex: 't.me/nome_do_canal').
-* In the `PASTA_BASE` field, insert the full path of the folder on your computer or external HD where the course should be saved (Ex: 'C:\Users\Fulano\Documents\Cursos').
+* In the `CANAL_ALVO` field, insert the link or the ID of the Telegram channel that contains the course (Ex: 't.me/channel_name').
+* In the `PASTA_BASE` field, insert the full path of the folder on your computer or external HD where the course should be saved (Ex: 'C:\Users\Johndoe\Documents\Courses').
 * Save the file with your changes.
 
 ### STEP 4: EXECUTE THE DOWNLOAD
