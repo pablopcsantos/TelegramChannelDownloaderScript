@@ -3,6 +3,9 @@ import re
 from telethon.sync import TelegramClient
 from telethon.errors import FileReferenceExpiredError # Importação nova para tratar o erro // New import to handle the error
 
+# Script criado por Pablo Phillipe Cândido dos Santos. Lattes: http://lattes.cnpq.br/9500873674712528
+# Script created by Pablo Phillipe Cândido dos Santos. Lattes: http://lattes.cnpq.br/9500873674712528
+
 # ==========================================
 # CONFIGURAÇÕES - PREENCHA COM SEUS DADOS // SETTINGS - FILL IN YOUR DETAILS
 # ==========================================
