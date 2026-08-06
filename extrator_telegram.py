@@ -32,6 +32,9 @@ async def main():
     # Pasta padrão caso o canal comece com vídeos antes de qualquer texto // Default folder in case the channel starts with videos before any text
     pasta_atual = os.path.join(PASTA_BASE, "00_Sem_Modulo")
     
+    # Flag para controlar a automação da opção 4 // Flag to control the automation of option 4
+    pular_identicos_automaticamente = False
+    
     # iter_messages com reverse=True lê da mais antiga para a mais nova // iter_messages with reverse=True reads from the oldest to the newest
     async for mensagem in client.iter_messages(CANAL_ALVO, reverse=True):
         
@@ -71,6 +74,11 @@ async def main():
                 tam_local_mb = tamanho_local_bytes / (1024 * 1024)
                 tam_remoto_mb = tamanho_remoto_bytes / (1024 * 1024)
                 
+                # Se a opção 4 já foi ativada antes e os arquivos são idênticos, pula direto // If option 4 was already activated and the files are identical, skip directly
+                if pular_identicos_automaticamente and tamanho_local_bytes == tamanho_remoto_bytes:
+                    print(f"    [!] Arquivo idêntico encontrado e ignorado automaticamente: {nome_arquivo} // Identical file found and automatically skipped: {nome_arquivo}")
+                    continue
+                
                 print(f"\n[!] Conflito encontrado: O arquivo '{nome_arquivo}' já existe na pasta. // Conflict found: The file '{nome_arquivo}' already exists in the folder.")
                 print(f"    - Tamanho na pasta // Size in folder: {tam_local_mb:.2f} MB")
                 print(f"    - Tamanho no Telegram // Size in Telegram: {tam_remoto_mb:.2f} MB")
@@ -81,7 +89,11 @@ async def main():
                     print("    2 - Ignorar arquivo do Telegram e pular para o próximo // Ignore Telegram file and skip to the next")
                     print("    3 - Substituir arquivo da pasta pelo do Telegram // Replace folder file with the Telegram one")
                     
-                    escolha = input("    Digite a opção desejada (1, 2 ou 3) // Enter the desired option (1, 2 or 3): ").strip()
+                    # Exibe a opção 4 apenas se os tamanhos forem exatamente iguais // Displays option 4 only if the sizes are exactly the same
+                    if tamanho_local_bytes == tamanho_remoto_bytes:
+                        print("    4 - Ignorar o arquivo do Telegram cujo download estava sendo preparado e iniciar o preparo do arquivo seguinte da lista; durante a atual sessão de downloads, repita esse processo para todos os arquivos da lista que apresentem o mesmo nome e mesmo tamanho. // Ignore the Telegram file whose download was being prepared and start preparing the next file on the list; during the current download session, repeat this process for all files on the list that have the same name and size.")
+                    
+                    escolha = input("    Digite a opção desejada // Enter the desired option: ").strip()
                     
                     if escolha == '1':
                         base, ext = os.path.splitext(nome_arquivo)
@@ -107,11 +119,17 @@ async def main():
                         os.remove(caminho_esperado)
                         print("    -> Opção 3: O arquivo antigo foi removido. Iniciando substituição... // Option 3: The old file was removed. Starting replacement...\n")
                         break
+                    
+                    elif escolha == '4' and tamanho_local_bytes == tamanho_remoto_bytes:
+                        pular_identicos_automaticamente = True
+                        pular_arquivo = True
+                        print("    -> Opção 4: Download ignorado. A regra automática foi ativada para os próximos arquivos idênticos. // Option 4: Download ignored. The automatic rule was activated for the next identical files.\n")
+                        break
                         
                     else:
-                        print("    [X] Opção inválida. Por favor, digite 1, 2 ou 3. // Invalid option. Please enter 1, 2 or 3.")
+                        print("    [X] Opção inválida. Por favor, digite uma opção válida. // Invalid option. Please enter a valid option.")
             
-            # Se o usuário escolheu a opção 2, o loop pula para a próxima mensagem // If the user chose option 2, the loop skips to the next message
+            # Se o usuário escolheu pular o arquivo, o loop segue para a próxima mensagem // If the user chose to skip the file, the loop moves to the next message
             if pular_arquivo:
                 continue
 
