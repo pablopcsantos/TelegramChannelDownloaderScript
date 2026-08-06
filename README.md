@@ -47,3 +47,8 @@
 * O Telegram enviará um código numérico de verificação diretamente para o aplicativo no seu celular.
 * Digite esse código no *terminal*.
 * Pronto. A partir desse momento, o *script* começará a trabalhar sozinho, criando as pastas e baixando todos os materiais do canal para o seu computador.
+
+### FUNCIONALIDADES RELACIONADAS À EXECUÇÃO DO SCRIPT
+
+* Encerramento Seguro: Após iniciado o download dos arquivos, o processo pode ser interrompido de forma segura e imediata a qualquer momento pressionando Ctrl + C no terminal.
+* Resolução Inteligente de Conflitos: Se o script detectar que um arquivo com o mesmo nome já existe na sua pasta, ele pausará o download e exibirá o tamanho de ambos os arquivos (o local e o do Telegram). Você poderá então escolher entre três ações: baixar uma nova cópia numerada (ex: "Arquivo (2).mp4"), pular este download e seguir para o próximo, ou substituir o arquivo antigo local pelo novo.
