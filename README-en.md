@@ -47,3 +47,8 @@
 * Telegram will send a numeric verification code directly to the app on your cell phone.
 * Type this code in the *terminal*.
 * Done. From this moment on, the *script* will start working alone, creating the folders and downloading all the channel's materials to your computer.
+
+### FEATURES RELATED TO SCRIPT EXECUTION
+
+* Safe Exit: Once the files have started downloading, the process can be stopped safely and immediately at any time by pressing Ctrl + C in the terminal.
+* Smart Conflict Resolution: If the script detects that a file with the same name already exists in your folder, it will pause the download and display the sizes of both files (the local one and the Telegram one). You can then choose between three actions: download a new numbered copy (e.g., "File (2).mp4"), skip this download and move to the next one, or overwrite the old local file with the new one.
