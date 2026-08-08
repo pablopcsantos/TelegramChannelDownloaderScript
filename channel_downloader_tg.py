@@ -3,8 +3,19 @@ import re
 from telethon.sync import TelegramClient
 from telethon.errors import FileReferenceExpiredError # Importação nova para tratar o erro // New import to handle the error
 
-# Script criado por Pablo Phillipe Cândido dos Santos. Lattes: http://lattes.cnpq.br/9500873674712528
-# Script created by Pablo Phillipe Cândido dos Santos. Lattes: http://lattes.cnpq.br/9500873674712528
+"""
+TelegramChannelDownloader
+
+Programa desenvolvido de forma independente por Pablo Phillipe Cândido dos Santos, destinado à automação do download de arquivos disponibilizados em canais do Telegram e à sua organização conforme a estrutura de origem.
+
+Program independently developed by Pablo Phillipe Cândido dos Santos to automate the download of files made available in Telegram channels and organize them according to their original structure.
+
+O desenvolvimento contou com ferramentas de inteligência artificial generativa como recurso auxiliar.
+
+The development process involved the use of generative artificial intelligence tools as an auxiliary resource.
+
+Currículo Lattes / Lattes Curriculum: (http://lattes.cnpq.br/9500873674712528)
+"""
 
 # ==========================================
 # CONFIGURAÇÕES - PREENCHA COM SEUS DADOS // SETTINGS - FILL IN YOUR DETAILS
